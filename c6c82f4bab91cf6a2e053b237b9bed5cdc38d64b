@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb01be8f_b7995cb5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-07-21T16:59:29Z",
+      "side": 1,
+      "message": "https://github.com/me-cafebabe-backyard/android_device_kang_ndk_translation\n\ncrashes with SEGV_ACCERR right now",
+      "revId": "c6c82f4bab91cf6a2e053b237b9bed5cdc38d64b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
