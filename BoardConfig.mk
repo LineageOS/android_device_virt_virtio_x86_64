@@ -29,8 +29,3 @@ TARGET_GRUB_ARCH := x86_64-efi
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := bzImage
 TARGET_KERNEL_ARCH := x86
-
-ifneq ($(wildcard $(TARGET_KERNEL_SOURCE)/Makefile),)
-BOOT_KERNEL_MODULES := $(strip $(shell cat $(DEVICE_PATH)/config/modules.load.ramdisk))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
-endif
