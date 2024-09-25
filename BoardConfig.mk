@@ -28,3 +28,21 @@ BOARD_KERNEL_CMDLINE += \
 
 BOARD_KERNEL_IMAGE_NAME := bzImage
 TARGET_KERNEL_ARCH := x86
+
+# Kernel (Legacy)
+KERNEL_VERSION := $(shell grep -s "^VERSION = " $(TARGET_KERNEL_SOURCE)/Makefile | awk '{ print $$3 }')
+KERNEL_PATCHLEVEL := $(shell grep -s "^PATCHLEVEL = " $(TARGET_KERNEL_SOURCE)/Makefile | awk '{ print $$3 }')
+
+ifeq ($(KERNEL_VERSION),4)
+    ifeq ($(KERNEL_PATCHLEVEL),14)
+        TARGET_KERNEL_CONFIG := x86_64_cuttlefish_defconfig
+    else
+        TARGET_KERNEL_CONFIG := x86_64_ranchu_defconfig
+    endif
+else ifeq ($(KERNEL_VERSION),5)
+    TARGET_KERNEL_CONFIG := gki_defconfig
+endif
+
+TARGET_KERNEL_CONFIG += \
+    lineaegos/virtio.config \
+    lineageos/feature/fbcon.config
