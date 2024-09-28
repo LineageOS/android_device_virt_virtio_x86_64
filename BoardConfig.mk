@@ -28,3 +28,13 @@ BOARD_KERNEL_CMDLINE += \
 
 BOARD_KERNEL_IMAGE_NAME := bzImage
 TARGET_KERNEL_ARCH := x86
+
+TARGET_KERNEL_CONFIG := \
+    x86_64_defconfig \
+    android-v-6.6/android-base.config \
+    android-v-6.6/android-base-conditional_x86_64.config \
+    lineageos/virtio.config \
+    lineageos/peripheral/bluetooth.config \
+    lineageos/peripheral/wifi.config \
+    lineageos/feature/fbcon.config \
+    lineageos/feature/pristine_kernel.config
