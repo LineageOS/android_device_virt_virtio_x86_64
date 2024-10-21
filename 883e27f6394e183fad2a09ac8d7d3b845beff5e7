@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26223690_887279f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2024-10-21T16:23:20Z",
+      "side": 1,
+      "message": "If it doesn\u0027t work you have broken audio effects HAL",
+      "revId": "883e27f6394e183fad2a09ac8d7d3b845beff5e7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
