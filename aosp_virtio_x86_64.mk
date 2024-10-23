@@ -13,8 +13,10 @@ $(call inherit-product, device/virt/virtio_x86_64/device.mk)
 
 $(call enforce-product-packages-exist,\
     android.hardware.health@2.0-impl-default.recovery \
+    com.android.ranging \
     DeviceDiagnostics \
-    product_manifest.xml)
+    product_manifest.xml \
+    uprobestats)
 
 PRODUCT_NAME := aosp_virtio_x86_64
 PRODUCT_DEVICE := virtio_x86_64
