@@ -11,6 +11,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 # Inherit from device
 $(call inherit-product, device/virt/virtio_x86_64/device.mk)
 
+# Enable Window Extensions
+$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
+
 $(call enforce-product-packages-exist,\
     android.hardware.health@2.0-impl-default.recovery \
     DeviceDiagnostics \
