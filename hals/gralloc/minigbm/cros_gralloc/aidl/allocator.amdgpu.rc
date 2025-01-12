@@ -1,0 +1,8 @@
+service vendor.graphics.allocator.amdgpu /vendor/bin/hw/android.hardware.graphics.allocator-service.minigbm_amdgpu
+    class hal animation
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    task_profiles ServiceCapacityLow
+    disabled

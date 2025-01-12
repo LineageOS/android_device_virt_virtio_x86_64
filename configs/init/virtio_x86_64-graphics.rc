@@ -10,6 +10,20 @@ on late-init && property:ro.boot.graphics=mesa_i915
     setprop ro.hardware.egl mesa
     setprop ro.opengles.version 196610
 
+# swiftshader_amdgpu
+on early-init && property:ro.boot.graphics=swiftshader_amdgpu
+    exec u:r:modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules amdgpu.ko
+
+on late-init && property:ro.boot.graphics=swiftshader_amdgpu
+    stop vendor.graphics.allocator
+    setprop ro.hardware.gralloc minigbm_amdgpu
+    enable vendor.graphics.allocator.amdgpu
+
+    setprop ro.cpuvulkan.version 4202496
+    setprop ro.hardware.egl angle
+    setprop ro.hardware.vulkan pastel
+    setprop ro.opengles.version 196609
+
 # swiftshader_i915
 on early-init && property:ro.boot.graphics=swiftshader_i915
     exec u:r:modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules i915.ko
