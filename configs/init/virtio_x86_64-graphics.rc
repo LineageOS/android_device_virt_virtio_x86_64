@@ -1,0 +1,23 @@
+# GPU driver
+on early-init && property:ro.boot.gpu=i915
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules i915.ko
+
+# mesa_i915
+on late-init && property:ro.boot.graphics=mesa_i915
+    stop vendor.graphics.allocator
+    setprop ro.hardware.gralloc minigbm_intel
+    enable vendor.graphics.allocator.intel
+
+    setprop ro.hardware.egl mesa
+    setprop ro.opengles.version 196610
+
+# swiftshader_i915
+on late-init && property:ro.boot.graphics=swiftshader_i915
+    stop vendor.graphics.allocator
+    setprop ro.hardware.gralloc minigbm_intel
+    enable vendor.graphics.allocator.intel
+
+    setprop ro.cpuvulkan.version 4202496
+    setprop ro.hardware.egl angle
+    setprop ro.hardware.vulkan pastel
+    setprop ro.opengles.version 196609

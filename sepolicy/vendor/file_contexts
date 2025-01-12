@@ -1,0 +1,2 @@
+# Same Process HAL
+/vendor/lib(64)?/libdrm_intel\.so		u:object_r:same_process_hal_file:s0
