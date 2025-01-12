@@ -14,6 +14,21 @@ $(call inherit-product, device/virt/virtio-common/device-common.mk)
 
 DEVICE_PATH := device/virt/virtio_x86_64
 
+# Graphics (Gralloc)
+ifneq ($(TARGET_USES_HWCOMPOSER_DRM_MINIGBM),true)
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator-service.minigbm_intel \
+    android.hardware.graphics.mapper@4.0-impl.minigbm_intel \
+    mapper.minigbm_intel
+endif
+
+PRODUCT_PACKAGES += \
+    gralloc.minigbm_intel
+
+# Init
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/init/virtio_x86_64-graphics.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/virtio_x86_64-graphics.rc
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
