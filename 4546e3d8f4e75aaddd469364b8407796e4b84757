@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bbe8b97d_e41208ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-01-12T21:46:41Z",
+      "side": 1,
+      "message": "missing `__DRI_IMAGE_FORMAT_` definitions",
+      "revId": "4546e3d8f4e75aaddd469364b8407796e4b84757",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
