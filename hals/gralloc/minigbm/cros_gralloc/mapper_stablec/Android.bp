@@ -1,0 +1,35 @@
+cc_library_shared {
+    name: "mapper.minigbm_intel",
+    defaults: ["minigbm_gralloc4_common_defaults"],
+    vintf_fragments: ["mapper.minigbm_intel.xml"],
+    shared_libs: [
+        "android.hardware.graphics.allocator-V2-ndk",
+        "libminigbm_gralloc_intel",
+    ],
+    header_libs: [
+        "libbase_headers",
+        "libimapper_stablec",
+        "libimapper_providerutils",
+    ],
+    srcs: [
+        ":minigbm_gralloc4_mapper_files",
+        "Mapper.cpp",
+    ],
+    cpp_std: "c++20",
+    enabled: false,
+    arch: {
+        x86: {
+            enabled: true,
+        },
+        x86_64: {
+            enabled: true,
+        },
+    },
+}
+
+prebuilt_etc {
+    name: "mapper.minigbm_intel.xml",
+    src: "mapper.minigbm_intel.xml",
+    sub_dir: "vintf",
+    installable: false,
+}
