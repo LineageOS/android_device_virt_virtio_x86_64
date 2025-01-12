@@ -1,0 +1,15 @@
+amdgpu_cflags = ["-DDRV_AMDGPU"]
+
+// AMDGPU
+cc_library_shared {
+    name: "libminigbm_gralloc_amdgpu",
+    defaults: ["minigbm_cros_gralloc_library_defaults"],
+    cflags: amdgpu_cflags,
+    include_dirs: ["external/libdrm/amdgpu"],
+}
+
+cc_library_shared {
+    name: "gralloc.minigbm_amdgpu",
+    defaults: ["minigbm_cros_gralloc0_defaults"],
+    shared_libs: ["libminigbm_gralloc_amdgpu"],
+}
