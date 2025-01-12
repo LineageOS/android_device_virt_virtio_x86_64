@@ -16,9 +16,13 @@ DEVICE_PATH := device/virt/virtio_x86_64
 
 # Graphics (Gralloc)
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator-service.minigbm_amdgpu \
     android.hardware.graphics.allocator-service.minigbm_intel \
+    android.hardware.graphics.mapper@4.0-impl.minigbm_amdgpu \
     android.hardware.graphics.mapper@4.0-impl.minigbm_intel \
+    gralloc.minigbm_amdgpu \
     gralloc.minigbm_intel \
+    mapper.minigbm_amdgpu \
     mapper.minigbm_intel
 
 # Init
