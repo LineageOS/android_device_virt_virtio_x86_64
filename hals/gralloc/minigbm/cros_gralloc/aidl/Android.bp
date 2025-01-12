@@ -1,0 +1,25 @@
+cc_binary {
+    name: "android.hardware.graphics.allocator-service.minigbm_intel",
+    defaults: ["minigbm_cros_gralloc_defaults"],
+    relative_install_path: "hw",
+    init_rc: ["allocator.intel.rc"],
+    vendor: true,
+    shared_libs: [
+        "android.hardware.graphics.allocator-V2-ndk",
+        "android.hardware.graphics.mapper@4.0",
+        "libbase",
+        "libbinder_ndk",
+        "libgralloctypes",
+        "libhidlbase",
+        "liblog",
+        "libminigbm_gralloc_intel",
+        "libminigbm_gralloc4_utils",
+    ],
+    static_libs: [
+        "libaidlcommonsupport",
+    ],
+    srcs: [
+        "Allocator.cpp",
+        "Main.cpp",
+    ],
+}
