@@ -2,6 +2,12 @@
 on early-init && property:ro.boot.gpu=i915
     exec u:r:modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules i915.ko
 
+on early-init && property:ro.boot.gpu=i915 && ro.boot.hardware_vulkan=intel
+    setprop ro.hardware.vulkan intel
+
+on early-init && property:ro.boot.gpu=i915 && ro.boot.hardware_vulkan=intel_hasvk
+    setprop ro.hardware.vulkan intel_hasvk
+
 # mesa_i915
 on late-init && property:ro.boot.graphics=mesa_i915
     stop vendor.graphics.allocator
