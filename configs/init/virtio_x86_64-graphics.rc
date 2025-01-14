@@ -9,6 +9,8 @@ on early-init && property:ro.boot.gpu=i915 && property:ro.boot.hardware_vulkan=i
 
 on early-init && property:ro.boot.gpu=i915 && property:ro.boot.hardware_vulkan=intel_hasvk
     setprop ro.hardware.vulkan intel_hasvk
+    setprop vendor.hwc.drm.avoid_using_alpha_bits_for_framebuffer 1
+    setprop vendor.hwc.drm.disable_planes 1
 
 # mesa_i915
 on late-init && property:ro.boot.graphics=mesa_i915
