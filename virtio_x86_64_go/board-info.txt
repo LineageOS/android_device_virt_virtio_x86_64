@@ -1,0 +1,1 @@
+require board=virtio_x86_64_go
