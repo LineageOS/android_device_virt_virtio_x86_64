@@ -31,6 +31,7 @@ endif
 
 # GRUB
 TARGET_GRUB_ARCH := x86_64-efi
+TARGET_GRUB_2ND_ARCH := i386-pc
 
 # Kernel
 BOARD_KERNEL_CMDLINE += \
