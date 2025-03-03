@@ -47,3 +47,6 @@ TARGET_KERNEL_CONFIG += \
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy/vendor
+
+# Virtual Machine template
+TARGET_VM_UTM_TEMPLATE_DIR := $(DEVICE_PATH)/vm_templates/utm
