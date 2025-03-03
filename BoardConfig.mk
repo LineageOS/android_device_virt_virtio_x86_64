@@ -28,3 +28,6 @@ BOARD_KERNEL_CMDLINE += \
 
 BOARD_KERNEL_IMAGE_NAME := bzImage
 TARGET_KERNEL_ARCH := x86
+
+# Virtual Machine template
+TARGET_VM_UTM_TEMPLATE_DIR := $(DEVICE_PATH)/vm_templates/utm
