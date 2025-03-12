@@ -27,7 +27,7 @@ TARGET_GRUB_BOOT_CONFIGS += $(DEVICE_PATH)/bootmgr/grub/grub-boot.cfg
 # Graphics (Mesa)
 BOARD_MESA3D_GALLIUM_DRIVERS += crocus
 
-ifneq ($(wildcard prebuilts/intel-clc/intel_clc),)
+ifneq ($(wildcard prebuilts/intel-clc/intel_clc prebuilts/mesa-build-dep/bin/intel_clc),)
 BOARD_MESA3D_MESON_ARGS += -Dintel-clc=system
 BOARD_MESA3D_GALLIUM_DRIVERS += iris
 BOARD_MESA3D_VULKAN_DRIVERS += intel intel_hasvk
