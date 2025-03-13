@@ -64,6 +64,7 @@ filegroup {
         "hwc2_device/hwc2_device.cpp",
 
         "utils/fd.cpp",
+        "utils/properties.cpp",
     ],
 }
 
@@ -82,9 +83,8 @@ cc_binary {
     ],
 
     shared_libs: [
-        "android.hardware.graphics.composer3-V3-ndk",
+        "android.hardware.graphics.composer3-V4-ndk",
         "libbase",
-        "libbinder",
         "libbinder_ndk",
         "liblog",
         "libutils",
