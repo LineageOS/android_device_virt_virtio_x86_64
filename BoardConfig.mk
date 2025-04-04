@@ -25,7 +25,7 @@ TARGET_ARCH_VARIANT := sandybridge
 TARGET_GRUB_BOOT_CONFIGS += $(DEVICE_PATH)/bootmgr/grub/grub-boot.cfg
 
 # Graphics (Mesa)
-BOARD_MESA3D_GALLIUM_DRIVERS += crocus i915
+BOARD_MESA3D_GALLIUM_DRIVERS += crocus
 
 ifneq ($(wildcard prebuilts/intel-clc/intel_clc),)
 BOARD_MESA3D_MESON_ARGS += -Dintel-clc=system
