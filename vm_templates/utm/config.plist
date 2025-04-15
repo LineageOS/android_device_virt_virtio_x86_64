@@ -27,7 +27,7 @@
 			<key>Identifier</key>
 			<string>vda</string>
 			<key>ImageName</key>
-			<string>vda.img</string>
+			<string>@UTM_VM_OUT_DISK_IMAGE_VDA_FILENAME@</string>
 			<key>ImageType</key>
 			<string>Disk</string>
 			<key>Interface</key>
