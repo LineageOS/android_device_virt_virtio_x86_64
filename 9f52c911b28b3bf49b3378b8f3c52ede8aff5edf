@@ -16,6 +16,24 @@
       "message": "...what changes has been applied? Where\u0027s the commit head of both the AOSP import and the actual tree with changes? What happened to authorship? Was there the need to do this on 22.2 branch? Was there a real need to do this instead of editing libdisplay_info scope?",
       "revId": "9f52c911b28b3bf49b3378b8f3c52ede8aff5edf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1ce572d_73b13a3e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-06-13T10:58:37Z",
+      "side": 1,
+      "message": "\u003e what changes has been applied\n\n\nthe ones on commit history on this path\n\n\u003e Where\u0027s the commit head of both the AOSP import and the actual tree with changes?\n\nAOSP head is mentioned on commit message\n\"actual tree with changes\" is in this tree, check commit history\n\n\u003e What happened to authorship?\n\nshall I list all authors from the entire commit history?",
+      "parentUuid": "f9787a84_1756ea0f",
+      "revId": "9f52c911b28b3bf49b3378b8f3c52ede8aff5edf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
