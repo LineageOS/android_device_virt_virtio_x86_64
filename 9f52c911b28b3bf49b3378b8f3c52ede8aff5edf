@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f9787a84_1756ea0f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-06-13T10:22:15Z",
+      "side": 1,
+      "message": "...what changes has been applied? Where\u0027s the commit head of both the AOSP import and the actual tree with changes? What happened to authorship? Was there the need to do this on 22.2 branch? Was there a real need to do this instead of editing libdisplay_info scope?",
+      "revId": "9f52c911b28b3bf49b3378b8f3c52ede8aff5edf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
