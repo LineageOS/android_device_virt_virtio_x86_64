@@ -1,11 +1,3 @@
-gensrcs {
-    name: "gen_minigbm_cros_gralloc_aidl_Allocator_cpp_intel",
-    // Escape from out/soong/.temp/sbox/RANDOM to build root
-    cmd: "sed \"s|*outResult = \\\"minigbm\\\";|*outResult = \\\"minigbm_intel\\\";|g\" ../../../../../external/minigbm/cros_gralloc/aidl/Allocator.cpp > $(out)",
-    output_extension: "cpp",
-    srcs: ["Allocator.cpp"],
-}
-
 cc_binary {
     name: "android.hardware.graphics.allocator-service.minigbm_intel",
     defaults: ["minigbm_cros_gralloc_defaults"],
@@ -26,8 +18,11 @@ cc_binary {
     static_libs: [
         "libaidlcommonsupport",
     ],
+    cflags: [
+        "-DIMAPPER_LIBRARY_SUFFIX=\"minigbm_intel\"",
+    ],
     srcs: [
-        ":gen_minigbm_cros_gralloc_aidl_Allocator_cpp_intel",
+        "Allocator.cpp",
         "Main.cpp",
     ],
     enabled: false,
