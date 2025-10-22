@@ -5,6 +5,7 @@ on init && property:ro.vendor.graphics.gpu=i915
     setprop ro.hardware.gralloc minigbm_intel
     enable vendor.graphics.allocator.intel
     stop vendor.hwcomposer-3
+    stop vendor.hwcomposer-3.drm_upstream
     enable vendor.hwcomposer-3.virtio_x86_64
     setprop ro.vendor.graphics ${ro.boot.graphics:-mesa}
 
