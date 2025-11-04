@@ -1,6 +1,6 @@
-# i915
-on init && property:ro.vendor.graphics.gpu=i915
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules i915.ko
+# Intel
+on init && property:ro.vendor.graphics.gpu=intel
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules i915.ko xe.ko
     stop vendor.graphics.allocator
     setprop ro.hardware.gralloc minigbm_intel
     enable vendor.graphics.allocator.intel
@@ -8,16 +8,16 @@ on init && property:ro.vendor.graphics.gpu=i915
     enable vendor.hwcomposer-3.virtio_x86_64
     setprop ro.vendor.graphics ${ro.boot.graphics:-mesa}
 
-on init && property:ro.vendor.graphics.gpu=i915 && property:ro.boot.gpu_workaround=all
+on init && property:ro.vendor.graphics.gpu=intel && property:ro.boot.gpu_workaround=all
     setprop vendor.hwc.drm.avoid_using_alpha_bits_for_framebuffer 1
     setprop vendor.hwc.drm.disable_planes 1
 
-# i915 - mesa
-on property:ro.vendor.graphics.gpu=i915 && property:ro.vendor.graphics=mesa
+# Intel - mesa
+on property:ro.vendor.graphics.gpu=intel && property:ro.vendor.graphics=mesa
     setprop ro.opengles.version 196610
 
-on property:ro.vendor.graphics.gpu=i915 && property:ro.vendor.graphics=mesa && property:ro.boot.hardware_vulkan=intel
+on property:ro.vendor.graphics.gpu=intel && property:ro.vendor.graphics=mesa && property:ro.boot.hardware_vulkan=intel
     setprop ro.hardware.vulkan intel
 
-on property:ro.vendor.graphics.gpu=i915 && property:ro.vendor.graphics=mesa && property:ro.boot.hardware_vulkan=intel_hasvk
+on property:ro.vendor.graphics.gpu=intel && property:ro.vendor.graphics=mesa && property:ro.boot.hardware_vulkan=intel_hasvk
     setprop ro.hardware.vulkan intel_hasvk
