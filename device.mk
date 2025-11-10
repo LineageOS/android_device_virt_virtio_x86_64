@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Graphics (Composer)
+TARGET_DRM_HWCOMPOSER_VARIANT := upstream
+
 # Kernel (Prebuilt)
 TARGET_PREBUILT_EMULATOR_KERNEL_USE ?= 6.6
 TARGET_PREBUILT_KERNEL_ARCH := x86_64
@@ -19,10 +22,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator-service.minigbm_intel \
     gralloc.minigbm_intel \
     mapper.minigbm_intel
-
-# Graphics (Composer)
-PRODUCT_PACKAGES += \
-    android.hardware.composer.hwc3-service.drm.virtio_x86_64
 
 # Init
 PRODUCT_COPY_FILES += \
