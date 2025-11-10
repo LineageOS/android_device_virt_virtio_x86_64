@@ -1,9 +1,0 @@
-service vendor.hwcomposer-3.virtio_x86_64 /vendor/bin/hw/android.hardware.composer.hwc3-service.drm.virtio_x86_64
-    class hal animation
-    interface aidl android.hardware.graphics.composer3.IComposer/default
-    user system
-    group graphics drmrpc
-    capabilities SYS_NICE
-    onrestart restart surfaceflinger
-    task_profiles ServiceCapacityLow
-    disabled
