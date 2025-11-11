@@ -8,9 +8,7 @@
 TARGET_DRM_HWCOMPOSER_VARIANT := upstream
 
 # Kernel (Prebuilt)
-TARGET_PREBUILT_EMULATOR_KERNEL_USE ?= 6.6
 TARGET_PREBUILT_KERNEL_ARCH := x86_64
-TARGET_PREBUILT_KERNEL_MODULES_ARCH := x86-64
 
 # Inherit from common
 $(call inherit-product, device/virt/virtio-common/device-common.mk)
