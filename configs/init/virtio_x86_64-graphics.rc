@@ -1,9 +1,6 @@
 # Intel
 on init && property:ro.vendor.graphics.gpu=intel
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules i915.ko xe.ko
-    stop vendor.graphics.allocator
-    setprop ro.hardware.gralloc minigbm_intel
-    enable vendor.graphics.allocator.intel
     setprop ro.vendor.graphics ${ro.boot.graphics:-mesa}
 
 on init && property:ro.vendor.graphics.gpu=intel && property:ro.boot.gpu_workaround=all
