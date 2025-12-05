@@ -1,1 +1,1 @@
-set_prop(vendor_init, vendor_hwcomposer_prop)
+set_prop(vendor_init, vendor_hwc_drm_prop)
