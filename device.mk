@@ -9,10 +9,7 @@ $(call inherit-product, device/virt/virtio-common/device-common.mk)
 DEVICE_PATH := device/virt/virtio_x86_64
 
 # Graphics (Allocator)
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator-service.minigbm_intel \
-    gralloc.minigbm_intel \
-    mapper.minigbm_intel
+TARGET_GRAPHICS_ALLOCATOR_HAL := minigbm-upstream
 
 # Graphics (Composer)
 TARGET_DRM_HWCOMPOSER_VARIANT := upstream

@@ -23,6 +23,9 @@ TARGET_ARCH_VARIANT := sandybridge
 # Boot manager
 TARGET_GRUB_BOOT_CONFIGS += $(DEVICE_PATH)/bootmgr/grub/grub-boot.cfg
 
+# Graphics (Allocator)
+$(call soong_config_set_string_list,minigbm_upstream,cflags,-DDRV_I915 -DDRV_XE)
+
 # Graphics (Mesa)
 BOARD_MESA3D_GALLIUM_DRIVERS += crocus iris
 BOARD_MESA3D_VULKAN_DRIVERS += intel intel_hasvk
