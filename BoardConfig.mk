@@ -32,14 +32,14 @@ BOARD_MESA3D_VULKAN_DRIVERS += intel intel_hasvk
 
 # Kernel
 BOARD_KERNEL_CMDLINE += \
-    8250.nr_uarts=1 \
-    console=ttyS0
+    8250.nr_uarts=1
 
 TARGET_KERNEL_CONFIG_EXT += \
     $(DEVICE_PATH)/configs/kernel/virtio.config \
     $(DEVICE_PATH)/configs/kernel/passthrough_gpus.config
 
 BOARD_KERNEL_IMAGE_NAME := bzImage
+BOARD_LINUX_SERIAL_DEVICE := ttyS0
 TARGET_KERNEL_ARCH := x86
 
 # SELinux
