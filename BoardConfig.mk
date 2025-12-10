@@ -35,7 +35,7 @@ BOARD_KERNEL_CMDLINE += \
     8250.nr_uarts=1
 
 TARGET_KERNEL_CONFIG_EXT += \
-    $(DEVICE_PATH)/configs/kernel/virtio.config \
+    $(DEVICE_PATH)/configs/kernel/virtio_x86_64.config \
     $(DEVICE_PATH)/configs/kernel/passthrough_gpus.config
 
 BOARD_KERNEL_IMAGE_NAME := bzImage
